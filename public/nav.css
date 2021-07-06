@@ -1,0 +1,19 @@
+header {
+    padding: 20px;
+    position: sticky;
+    margin: 0;
+    background-color: black;
+    border-bottom: 1px solid darkgrey;
+}
+
+.nav-txt {
+    text-decoration: none;
+    color: brown;
+    font-size: 25px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.nav-txt:hover {
+    text-decoration: underline;
+}
