@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>Book App for poor people</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="nav.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="shortcut icon" href="/images/bookicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="clearfix">
@@ -14,8 +18,11 @@
         <a href="/books" class="nav-txt">Books</a>
       </div>
     </header>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
     <footer>
+      <p class="small-print" id="copyright-statement">@Copyrights reserved by Book Management Corporation 2021</p>
     </footer>
   </body>
 </html>
