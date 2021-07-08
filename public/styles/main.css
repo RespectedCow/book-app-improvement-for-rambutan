@@ -5,14 +5,12 @@ body {
 }
 
 #landingimage {
-    background-image: url("/images/librarybackgroundinside.png");
+    background-image: linear-gradient(to bottom, rgba(76,88,102,0.4), rgba(76,88,102,0.4)),url("/images/librarybackgroundinside.png");
     background-repeat: no-repeat;
     width: 1000px;
     height: 600px;
     margin: 0;
     margin-left: 300px;
-    -webkit-blur: blur(3px);
-    filter: blur(3px);
     display: flex;
     align-items: center;
 }
@@ -27,8 +25,25 @@ body {
     margin-left: 650px;
 }
 
+#landingimagebutton {
+    margin-left: 40px;
+}
+
+.white-text {
+    color: white;
+}
+
 .small-print {
     font-size: 12px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.noblur {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 
 .red-button {
@@ -38,11 +53,14 @@ body {
     background-color: red;
     font-size: 20px;
     padding: 10px;
-    margin-left: 100px;
     color: white;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500px;
+}
+
+#box-container {
+    margin-left: 100px;
 }
 
 footer {
@@ -90,6 +108,18 @@ h1 {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.copyright-link {
+    font-size: 17px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.copyright-link:hover {
+    text-decoration: underline;
 }
 
 #copyright-statement {
