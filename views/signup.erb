@@ -1,28 +1,32 @@
-<h1>Sign Up</h1>
-<a href='/'>Go back to Home</a>
+<section class="gray-body">
+  <section class="shadow" id="sign-up-container">
+    <h1>Sign Up</h1>
+    <a href='/'>Go back to Home</a>
 
-<% if @user.errors.any? %>
-  <div>
-    <ul>
-    <% @user.errors.each do |error| %>
-      <li><%= error.full_message %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end  %>
+    <% if @user.errors.any? %>
+      <div>
+        <ul>
+        <% @user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end  %>
 
-<form action='/sign-up' method='post'>
-  <label for='full_name'>Full Name</label>
-  <input type='text' name='full_name' />
+    <form action='/sign-up' method='post'>
+      <label for='full_name' class='sign-up-label'>Full Name</label>
+      <input type='text' name='full_name' /><br>
 
-  <label for='email'>Email</label>
-  <input type='email' name='email' />
+      <label for='email' class='sign-up-label'>Email</label>
+      <input type='email' name='email' /><br>
 
-  <label for='password'>Password</label>
-  <input type='password' name='password'/>
+      <label for='password' class='sign-up-label'>Password</label>
+      <input type='password' name='password'/><br>
 
-  <label for='password'>Password Confirmation</label>
-  <input type='password' name='password_confirmation'/>
+      <label for='password' class='sign-up-label'>Password Confirmation</label>
+      <input type='password' name='password_confirmation'/><br>
 
-  <input type='submit' value='Sign Up' />
-</form>
+      <input type='submit' value='Sign Up' />
+    </form>
+  </section>
+</section>
