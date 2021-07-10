@@ -1,6 +1,8 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  has_many :organizations
+
   attr_accessor :password, :password_confirmation
 
   # validations provided Active Record

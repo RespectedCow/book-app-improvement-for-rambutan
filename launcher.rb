@@ -4,6 +4,7 @@ require 'sinatra/reloader'
 require "sinatra/activerecord"
 
 require './models/user'
+require './models/organization'
 
 enable :sessions
 
@@ -45,7 +46,7 @@ post '/sign-out' do
 end
 
 get '/sign-in' do
-  erb :sign_in
+  erb :signin
 end
 
 post '/sign-in' do
@@ -79,6 +80,27 @@ post '/sign-up' do
   else
     erb :signup
   end
+end
+
+get '/create/organization' do
+  if user_signed_in?
+    @organization = @current_user.organizations.build
+    erb :create_organization
+  else
+    redirect '/sign-up'
+  end
+end
+
+get '/create/books' do
+  "404 this page aint created yet douche bag!"
+end
+
+get '/home' do
+  erb :home
+end
+
+get '/dashboard' do
+  erb :dashboard
 end
 
 get '/books' do

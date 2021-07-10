@@ -15,8 +15,23 @@
   <body>
     <header class="clearfix">
       <div class="nav">
-        <a href="/" class="nav-txt">Home</a>
-        <a href="/books" class="nav-txt">Books</a>
+        <a href="/" class="nav-logo">
+          <img height="50" width="180" title="Book App Manager" src="/images/app-logo01.png">
+        </a>
+        <section class="align-center text-center ms-auto">
+          <a href="/" class="nav-txt">Home</a>
+          <a href="/about" class="nav-txt">About</a>
+          <a href="/dashboard" class="nav-txt">Dashboard</a>
+          <% if user_signed_in? %>
+            <form method="post" action="sign-out" class="inline">
+              <input type="hidden" name="extra_submit_param" value="extra_submit_value">
+              <input type="submit" name="submit_param" value="Sign out" class="button">
+            </form>
+          <% else %>  
+            <a href="/sign-up" class="button" class="button">Sign up</a>
+            <a href="/sign-in" class="button" class="button">Sign in</a>
+          <% end %>     
+        </section>
       </div>
     </header>
     <main>

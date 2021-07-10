@@ -1,0 +1,19 @@
+<% if @organization.errors.any? %>
+  <div>
+    <ul>
+    <% @organization.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end  %>
+
+<form method="post" action="create_organization">
+    <label for="name" class="sign-up-label">Organization's name</label>
+    <input type="text" name="name"><br>
+
+    <label for="description" class="sign-up-label">Organization's description</label>
+    <input type="text" name="description"><br>
+
+    <input type="submit" value="Create Organization">
+</form>
