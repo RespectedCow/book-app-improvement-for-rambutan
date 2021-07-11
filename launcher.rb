@@ -82,9 +82,29 @@ post '/sign-up' do
   end
 end
 
+post '/create/create_organization' do
+  @organization = current_user.organizations.build(name: params[:name],
+                                            description: params[:description])
+
+  if @organization.save
+    redirect '/organizations/:id'
+  else
+    redirect '/create/organization'
+  end
+end
+
+get '/organizations/:id' do
+  @organization = Organization.find(params[:id])
+  if !@organization.nil?
+    erb :organization_page
+  else
+    erb :notfound
+  end
+end
+
 get '/create/organization' do
   if user_signed_in?
-    @organization = @current_user.organizations.build
+    @organization = current_user.organizations.build
     erb :create_organization
   else
     redirect '/sign-up'
