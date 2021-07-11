@@ -1,2 +1,7 @@
 <h1>Home</h1>
-<p>Thank you for signing in!</p>
+<p>Thank you for signing up!</p>
+<div class="divider"></div>
+<h2>Your organizations</h2>
+<% @current_user.organizations.each do |organization| %>
+    <a href="/organizations/<%= organization.id %>"><%= organization.name %></a>
+<% end %>

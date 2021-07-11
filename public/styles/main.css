@@ -110,6 +110,13 @@ h2 {
     color: black;
 }
 
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: grey;
+    margin-left: 20px;
+}
+
 #landingcontainer {
     background-color: lightgray;
     height: 800px;

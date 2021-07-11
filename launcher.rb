@@ -87,14 +87,14 @@ post '/create/create_organization' do
                                             description: params[:description])
 
   if @organization.save
-    redirect '/organizations/:id'
+    redirect '/organizations/' + @organization.id.to_s
   else
     redirect '/create/organization'
   end
 end
 
 get '/organizations/:id' do
-  @organization = Organization.find(params[:id])
+  @organization = Organization.find_by(id: params[:id])
   if !@organization.nil?
     erb :organization_page
   else
@@ -113,14 +113,6 @@ end
 
 get '/create/books' do
   "404 this page aint created yet douche bag!"
-end
-
-get '/home' do
-  erb :home
-end
-
-get '/dashboard' do
-  erb :dashboard
 end
 
 get '/books' do

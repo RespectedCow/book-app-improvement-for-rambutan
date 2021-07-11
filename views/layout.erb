@@ -21,7 +21,6 @@
         <section class="align-center text-center ms-auto">
           <a href="/" class="nav-txt">Home</a>
           <a href="/about" class="nav-txt">About</a>
-          <a href="/dashboard" class="nav-txt">Dashboard</a>
           <% if user_signed_in? %>
             <form method="post" action="sign-out" class="inline">
               <input type="hidden" name="extra_submit_param" value="extra_submit_value">
@@ -38,7 +37,7 @@
       <%= yield %>
     </main>
     <footer>
-      <a href="/dashboard" class="copyright-link">Dashboard</a>
+      <a href="/" class="copyright-link">Home</a>
       <p class="small-print" id="copyright-statement">@Copyrights reserved by Book Management Corporation 2021</p>
     </footer>
   </body>
